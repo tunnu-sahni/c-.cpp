@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timetable</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>🎓 AI College Assistant</h2>
+
+    <div>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<section class="page">
+
+    <h1>🕐 Class Timetable</h1>
+
+    <table>
+
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Room</th>
+        </tr>
+
+        {% for item in timetable %}
+
+        <tr>
+            <td>{{ item.day }}</td>
+            <td>{{ item.time }}</td>
+            <td>{{ item.subject }}</td>
+            <td>{{ item.room }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</section>
+
+</body>
+</html>
+
+

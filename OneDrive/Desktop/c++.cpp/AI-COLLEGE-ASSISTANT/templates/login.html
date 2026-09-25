@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - AI College Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>🎓 AI College Assistant</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div>
+
+        <h1>Student Login</h1>
+
+        <p>
+            Login to access your College Assistant dashboard.
+        </p>
+
+        <form method="POST"
+              style="max-width:400px;margin:30px auto;text-align:left;">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                style="width:100%;padding:12px;margin:8px 0 18px;"
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+                style="width:100%;padding:12px;margin:8px 0 18px;"
+            >
+
+            <button
+                type="submit"
+                class="btn"
+                style="border:none;cursor:pointer;"
+            >
+                Login
+            </button>
+
+        </form>
+
+        <p>
+            Don't have an account?
+            <a href="/register">Register here</a>
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+</html>

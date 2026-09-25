@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Notices</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>🎓 AI College Assistant</h2>
+
+    <div>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<section class="page">
+
+    <h1>📢 College Notices</h1>
+
+    {% for notice in notices %}
+
+    <div class="card">
+
+        <h2>{{ notice.title }}</h2>
+
+        <p>{{ notice.description }}</p>
+
+        <small>
+            📅 {{ notice.date }}
+        </small>
+
+    </div>
+
+    {% endfor %}
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - AI College Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>🎓 AI College Assistant</h2>
+
+    <div>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<section class="dashboard">
+
+    <h1>Welcome to AI College Assistant</h1>
+
+    <p>
+        Manage your college information from one place.
+    </p>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>🤖 AI Chatbot</h3>
+            <p>Ask questions about your college.</p>
+            <a href="/chatbot">Open Chatbot</a>
+        </div>
+
+        <div class="card">
+            <h3>📢 Notices</h3>
+            <p>View latest college notices.</p>
+            <a href="/notices">View Notices</a>
+        </div>
+
+        <div class="card">
+            <h3>📚 Courses</h3>
+            <p>Explore available courses.</p>
+            <a href="/courses">View Courses</a>
+        </div>
+
+        <div class="card">
+            <h3>🕐 Timetable</h3>
+            <p>Check your class timetable.</p>
+            <a href="/timetable">View Timetable</a>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - AI College Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        🎓
+        <span>AI College Assistant</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="{{ url_for('dashboard') }}">▦ Dashboard</a>
+        <a href="/logout">⇥ Logout</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="welcome">Welcome to</p>
+
+        <h1>
+            AI College
+            <span>Assistant</span>
+        </h1>
+
+        <p class="subtitle">
+            Manage your college information from one place.
+        </p>
+
+        <div class="line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+
+
+    <!-- CHATBOT -->
+    <div class="feature-card chatbot-card">
+
+        <div class="icon-circle">
+            🤖
+        </div>
+
+        <h2>AI Chatbot</h2>
+
+        <p>
+            Ask questions about your college.
+        </p>
+
+        <a href="{{ url_for('chatbot') }}" class="feature-btn">
+            Open Chatbot →
+        </a>
+
+    </div>
+
+
+    <!-- NOTICES -->
+    <div class="feature-card notice-card">
+
+        <div class="icon-circle">
+            📢
+        </div>
+
+        <h2>Notices</h2>
+
+        <p>
+            View latest college notices.
+        </p>
+
+        <a href="/notices" class="feature-btn">
+            View Notices →
+        </a>
+
+    </div>
+
+
+    <!-- COURSES -->
+    <div class="feature-card courses-card">
+
+        <div class="icon-circle">
+            📚
+        </div>
+
+        <h2>Courses</h2>
+
+        <p>
+            Explore available courses.
+        </p>
+
+        <a href="/courses" class="feature-btn">
+            View Courses →
+        </a>
+
+    </div>
+
+
+    <!-- TIMETABLE -->
+    <div class="feature-card timetable-card">
+
+        <div class="icon-circle">
+            📅
+        </div>
+
+        <h2>Timetable</h2>
+
+        <p>
+            Check your class timetable.
+        </p>
+
+        <a href="/timetable" class="feature-btn">
+            View Timetable →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BOTTOM INFO -->
+<section class="info-section">
+
+    <div class="info-item">
+        <div class="info-icon">🎓</div>
+        <div>
+            <h3>Stay Organized</h3>
+            <p>Your college information in one place.</p>
+        </div>
+    </div>
+
+
+    <div class="info-item">
+        <div class="info-icon">🛡️</div>
+        <div>
+            <h3>Secure</h3>
+            <p>Your information stays protected.</p>
+        </div>
+    </div>
+
+
+    <div class="info-item">
+        <div class="info-icon">⚡</div>
+        <div>
+            <h3>Fast Access</h3>
+            <p>Get information quickly.</p>
+        </div>
+    </div>
+
+
+    <div class="info-item">
+        <div class="info-icon">🔔</div>
+        <div>
+            <h3>Always Updated</h3>
+            <p>Get the latest college updates.</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- DECORATIVE BACKGROUND -->
+<div class="bubble bubble1"></div>
+<div class="bubble bubble2"></div>
+<div class="bubble bubble3"></div>
+
+</body>
+</html>

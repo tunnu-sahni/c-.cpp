@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>🎓 AI College Assistant</h2>
+
+    <div>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<section class="page">
+
+    <h1>📚 Available Courses</h1>
+
+    <div class="features">
+
+        {% for course in courses %}
+
+        <div class="card">
+
+            <h2>{{ course.name }}</h2>
+
+            <p>{{ course.description }}</p>
+
+            <strong>
+                Duration: {{ course.duration }}
+            </strong>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
