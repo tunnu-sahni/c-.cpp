@@ -9,12 +9,21 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     cout << "Hello World " << '\n';
+//     cout << "I am learning c++";
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    cout << "Hello World " << '\n';
+    cout << "Hello world!" << endl;
     cout << "I am learning c++";
     return 0;
-}
 
+}
