@@ -61,3 +61,45 @@
 //     return 0;
 // }
 
+// constants
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     const int myNum  = 15;;
+//     cout << myNum;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     const int minutePerHour = 60;
+//     cout << minutePerHour;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     const int myNum = 15;
+//     cout << myNum;
+//     return 0;
+// }
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int length = 4;
+    int width = 6;
+
+    int area = length * width;
+    cout << "length is:" << length << "\n";
+    cout << "area of the rectangle is:" << area << "\n";
+
+    return 0;
+    
+}
