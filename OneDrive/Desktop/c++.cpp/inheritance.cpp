@@ -67,45 +67,90 @@
 //     return 0;
 // }
 //multiple inheritance
+// #include <iostream>
+// using namespace std;
+
+// class Animal
+// {
+//     public:
+
+//        void eat()
+//        {
+//         cout << "Animal is eating " << endl;
+//        }
+// };
+// class Mammal : public Animal
+// {
+//     public:
+
+//        void walk()
+//        {
+//         cout << "Mammal walks" << endl;
+//        }
+// };
+
+// class Dog : public Mammal
+// {
+//     public:
+
+//        void bark()
+//        {
+//         cout << "dog barks" << endl;
+//        }
+// };
+
+// int main()
+// {
+//     Dog d;
+
+//     d.eat();
+//     d.walk();
+//     d.bark();
+
+//     return 0;
+// }
+
+// //multiple inheritance
 #include <iostream>
 using namespace std;
 
-class Animal
+class Father 
 {
     public:
-
-       void eat()
+       
+       void fatherProperty()
        {
-        cout << "Animal is eating " << endl;
-       }
-};
-class Mammal : public Animal
-{
-    public:
-
-       void walk()
-       {
-        cout << "Mammal walks" << endl;
+        cout << "Father property" << endl;
        }
 };
 
-class Dog : public Mammal
+class Mother
 {
     public:
 
-       void bark()
+       void motherProperty()
        {
-        cout << "dog barks" << endl;
+        cout << "Mother property" << endl;
+       }
+};
+
+class child : public Father, public Mother
+{
+    public:
+
+       void childProperty()
+       {
+        cout << "child property" << endl;
        }
 };
 
 int main()
 {
-    Dog d;
+    child c;
 
-    d.eat();
-    d.walk();
-    d.bark();
+    c.fatherProperty();
+    c.motherProperty();
+    c.childProperty();
 
     return 0;
 }
