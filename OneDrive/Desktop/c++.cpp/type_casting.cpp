@@ -73,3 +73,17 @@ int main()
 
     return 0;
 }
+//reinterpret_cast
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number = 100;
+
+    int*ptr = &number;
+
+    cout << "value: " << *ptr << endl;
+
+    return 0;
+}
