@@ -31,3 +31,27 @@ int main()
 
     return 0;
 }
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ofstream file("student.txt");
+
+    if (file.is_open())
+    {
+        file << "Name: sahni\n";
+        file << "marks: 90\n";
+
+        file.close();
+
+        cout << "Data writen successfully";
+    }
+    else
+    {
+        cout << "Unable to open file";
+    }
+    return 0;
+}
