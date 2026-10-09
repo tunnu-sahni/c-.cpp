@@ -33,26 +33,48 @@
 // }
 
 //transform bonus marks add
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main()
+// {
+//     vector<int> marks = {60, 70, 80, 90 , 100};
+
+//     int bonus = 5;
+
+//     transform(marks.begin(), marks.end(), marks.begin(), [bonus](int m)
+//     {
+//         return m + bonus;
+//     });
+
+//     for (int mark : marks)
+//     {
+//         cout << mark << " ";
+//     }
+
+//     return 0;
+// }
+
+//thread
+
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <thread>
 using namespace std;
 
+void task()
+{
+    cout << "Thread is running..." << endl;
+
+}
 int main()
 {
-    vector<int> marks = {60, 70, 80, 90 , 100};
+    thread t1(task);
 
-    int bonus = 5;
+    t1.join();
 
-    transform(marks.begin(), marks.end(), marks.begin(), [bonus](int m)
-    {
-        return m + bonus;
-    });
-
-    for (int mark : marks)
-    {
-        cout << mark << " ";
-    }
+    cout << "Main thread is exiting..." << endl;
 
     return 0;
 }
