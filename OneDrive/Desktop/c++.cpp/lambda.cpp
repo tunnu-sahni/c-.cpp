@@ -59,20 +59,55 @@
 
 //thread
 
+// #include <iostream>
+// #include <thread>
+// using namespace std;
+
+// void task()
+// {
+//     cout << "Thread is running..." << endl;
+
+// }
+// int main()
+// {
+//     thread t1(task);
+
+//     t1.join();
+
+//     cout << "Main thread is exiting..." << endl;
+
+//     return 0;
+// }
+
+//multiple thread
+
 #include <iostream>
 #include <thread>
 using namespace std;
 
-void task()
+void task1()
 {
-    cout << "Thread is running..." << endl;
-
+    for (int i = 1; i <= 5; i++)
+    {
+        cout << "Task 1: " << i << endl;
+    }
 }
+
+void task2()
+{
+    for (int i = 1; i <= 5; i++)
+    {
+        cout << "Task 2: " << i << endl;
+    }
+}
+
 int main()
 {
-    thread t1(task);
+    thread t1(task1);
+    thread t2(task2);
 
     t1.join();
+    t2.join();
 
     cout << "Main thread is exiting..." << endl;
 
